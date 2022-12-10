@@ -1,1 +1,1 @@
-const main={o:()=>{console.log("hello")},l:()=>{console.log("world!")}};main.o(),main.l();
+let cart;(async()=>{var t=await import("./modules/cart/main.mjs");cart=new t.default})(),document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".product button").forEach(t=>t.addEventListener("click",()=>{console.log(cart)}))});

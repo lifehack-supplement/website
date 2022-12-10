@@ -1,13 +1,13 @@
-const main = (() => {
-  const hello = () => {
-    console.log('hello');
-  };
-  const world = () => {
-    console.log('world!');
-  };
-
-  return { hello, world };
+let cart;
+(async () => {
+  const cartModule = await import('./modules/cart/main.mjs');
+  cart = new cartModule.default();
 })();
 
-main.hello();
-main.world();
+document.addEventListener("DOMContentLoaded", () => {
+  const addToCartButtons = document.querySelectorAll(".product button");
+
+  addToCartButtons.forEach((button) => button.addEventListener('click', () => {
+    console.log(cart);
+  }));
+});

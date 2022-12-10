@@ -4,18 +4,21 @@
   "description": "nmn is a supplement used to extend lifespan and make life more energetic in general",
   "main": "js/main.js",
   "scripts": {
-    "build-js": "uglifyjs js/main.js -c -m --mangle-props --mangle-props -o build/build.js",
+    "build-js": "uglifyjs js/main.js -c -m --mangle-props -o build/build.js",
+    "build-module-cart": "uglifyjs js/modules/cart/main.mjs -c -m --mangle-props -o build/modules/cart/main.mjs",
     "build-css": "node-sass scss -o build",
-    "build": "npm run build-js & npm run build-css",
+    "build": "npm run build-js & npm run build-module-cart & npm run build-css",
     "watch": "rerun-script"
   },
   "watches": {
     "build-js": "js/**",
+    "build-module-cart": "js/modules/cart/**",
     "build-css": "scss/**"
   },
   "author": "Andrei Bereczki",
   "license": "ISC",
   "devDependencies": {
+    "live-server": "^1.2.2",
     "node-sass": "^7.0.3",
     "rerun-script": "^0.6.0",
     "uglify-js": "^3.17.1"
