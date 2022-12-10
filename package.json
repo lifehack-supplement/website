@@ -1,0 +1,23 @@
+{
+  "name": "nmn",
+  "version": "1.0.0",
+  "description": "nmn is a supplement used to extend lifespan and make life more energetic in general",
+  "main": "js/main.js",
+  "scripts": {
+    "build-js": "uglifyjs js/main.js -c -m --mangle-props --mangle-props -o build/build.js",
+    "build-css": "node-sass scss -o build",
+    "build": "npm run build-js & npm run build-css",
+    "watch": "rerun-script"
+  },
+  "watches": {
+    "build-js": "js/**",
+    "build-css": "scss/**"
+  },
+  "author": "Andrei Bereczki",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.3",
+    "rerun-script": "^0.6.0",
+    "uglify-js": "^3.17.1"
+  }
+}

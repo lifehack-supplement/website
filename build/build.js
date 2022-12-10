@@ -1,0 +1,1 @@
+const main={o:()=>{console.log("hello")},l:()=>{console.log("world!")}};main.o(),main.l();
