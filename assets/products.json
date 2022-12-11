@@ -1,0 +1,13 @@
+[
+  {
+    "id": 0,
+    "name": "NMN pure powder",
+    "description": "a looong description about NMN",
+    "quantity": 1,
+    "quantityUnit": "kg",
+    "price": 1000.00,
+    "currency": "eur",
+    "discount": 0,
+    "assets": ["./assets/images/product/nmn/nmn-powder.jpg"]
+  }
+]
