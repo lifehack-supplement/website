@@ -33,6 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   addToCartButtons.forEach((button) => button.addEventListener('click', (event) => {
     cart.add({ id: Math.floor(Math.random()*100) });
+    const productNode = event.target.parentNode;
+    const productNodeFake = document.createElement('div');
+    productNodeFake.classList.add("fake", "show");
+    productNode.appendChild(productNodeFake);
+    setTimeout(() => productNode.removeChild(productNodeFake), 1000);
     updateDOMCartSize();
   }));
 });
