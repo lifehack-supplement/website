@@ -1,16 +1,24 @@
 export default class Cart {
-  #products = [];
+  #products = {};
   constructor() {}
 
   add(product) {
-    this.#products.push(product);
+    this.#products[product.id] = product;
   }
 
-  remove(product) {
+  remove(productId) {
+    delete this.#products[productId];
+  }
 
+  clear() {
+    this.#products = {};
   }
 
   getSize() {
-    return this.#products.length;
+    return Object.keys(this.#products).length;
+  }
+
+  getAll() {
+    return this.#products;
   }
 };

@@ -61,19 +61,27 @@ header {
             color: cornflowerblue;
             border-bottom-color: cornflowerblue; }
         header nav ul li #cartSizeBubble {
-          display: none;
           position: absolute;
           top: 16px;
-          right: -7px;
-          width: 15px;
-          height: 15px;
-          border-radius: 7.5px;
-          background-color: #ff0000;
-          color: #ffffff;
-          font-size: 11px;
-          justify-content: center;
-          align-items: center;
-          animation: .3s 1 normal bubbleZoomIn; }
+          right: -7px; }
+
+.error {
+  background-color: #ff0000;
+  color: #ffffff; }
+
+.bubble {
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 0% 0%; }
+  .bubble.show {
+    animation: .3s forwards 1 normal bubbleZoomIn; }
+  .bubble.hide {
+    animation: .3s forwards 1 normal bubbleZoomOut; }
 
 @keyframes bubbleZoomIn {
   0% {
@@ -82,6 +90,14 @@ header {
     scale: 115% 115%; }
   100% {
     scale: 100% 100%; } }
+
+@keyframes bubbleZoomOut {
+  0% {
+    scale: 100% 100%; }
+  20% {
+    scale: 115% 115%; }
+  100% {
+    scale: 0% 0%; } }
 
 footer {
   padding: 6em .7em 3em;

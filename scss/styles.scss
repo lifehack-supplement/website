@@ -75,22 +75,34 @@ header {
           }
         }
         #cartSizeBubble {
-          display: none;
           position: absolute;
           top: 16px;
           right: -7px;
-          width: 15px;
-          height: 15px;
-          border-radius: 7.5px;
-          background-color: #ff0000;
-          color: #ffffff;
-          font-size: 11px;
-          justify-content: center;
-          align-items: center;
-          animation: .3s 1 normal bubbleZoomIn;
         }
       }
     }
+  }
+}
+
+.error {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.bubble {
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
+  font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 0% 0%;
+  &.show {
+    animation: .3s forwards 1 normal bubbleZoomIn;
+  }
+  &.hide {
+    animation: .3s forwards 1 normal bubbleZoomOut;
   }
 }
 
@@ -105,6 +117,20 @@ header {
 
   100% {
     scale: 100% 100%;
+  }
+}
+
+@keyframes bubbleZoomOut {
+  0% {
+    scale: 100% 100%;
+  }
+
+  20% {
+    scale: 115% 115%;
+  }
+
+  100% {
+    scale: 0% 0%;
   }
 }
 
