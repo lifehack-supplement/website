@@ -5,7 +5,7 @@ let cart;
 })();
 
 function updateDOMCartSize() {
-  const cartSizeChip = document.getElementById("cartSizeChip");
+  const cartSizeChip = document.getElementById("cartSizeBubble");
   cartSizeChip.textContent = cart.getSize();
   cartSizeChip.style.display = "flex";
 }

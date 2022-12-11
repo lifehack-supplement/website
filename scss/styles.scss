@@ -74,7 +74,7 @@ header {
             border-bottom-color: cornflowerblue;
           }
         }
-        #cartSizeChip {
+        #cartSizeBubble {
           display: none;
           position: absolute;
           top: 16px;
@@ -87,14 +87,14 @@ header {
           font-size: 11px;
           justify-content: center;
           align-items: center;
-          animation: .3s 1 normal chipBubbleUp;
+          animation: .3s 1 normal bubbleZoomIn;
         }
       }
     }
   }
 }
 
-@keyframes chipBubbleUp {
+@keyframes bubbleZoomIn {
   0% {
     scale: 0% 0%;
   }

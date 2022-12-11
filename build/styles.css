@@ -60,7 +60,7 @@ header {
             text-decoration: none;
             color: cornflowerblue;
             border-bottom-color: cornflowerblue; }
-        header nav ul li #cartSizeChip {
+        header nav ul li #cartSizeBubble {
           display: none;
           position: absolute;
           top: 16px;
@@ -73,9 +73,9 @@ header {
           font-size: 11px;
           justify-content: center;
           align-items: center;
-          animation: .3s 1 normal chipBubbleUp; }
+          animation: .3s 1 normal bubbleZoomIn; }
 
-@keyframes chipBubbleUp {
+@keyframes bubbleZoomIn {
   0% {
     scale: 0% 0%; }
   80% {
