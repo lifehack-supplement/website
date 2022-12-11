@@ -4,8 +4,8 @@
   "description": "nmn is a supplement used to extend lifespan and make life more energetic in general",
   "main": "js/main.js",
   "scripts": {
-    "build-js": "uglifyjs js/main.js -c -m --mangle-props -o build/build.js",
-    "build-module-cart": "uglifyjs js/modules/cart/main.mjs -c -m --mangle-props -o build/modules/cart/main.mjs",
+    "build-js": "uglifyjs js/main.js -c -m -o build/build.js",
+    "build-module-cart": "uglifyjs js/modules/cart/main.mjs -c -m --module -o build/modules/cart/main.mjs",
     "build-css": "node-sass scss -o build",
     "build": "npm run build-js & npm run build-module-cart & npm run build-css",
     "watch": "rerun-script"

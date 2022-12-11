@@ -1,1 +1,1 @@
-export default class Cart{constructor(){console.log("hello world.")}}
+export default class{#products=[];constructor(){}add(t){this.#products.push(t)}remove(t){}getSize(){return this.#products.length}}

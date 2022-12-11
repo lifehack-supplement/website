@@ -1,5 +1,16 @@
 export default class Cart {
-    constructor() {
-        console.log('hello world.');
-    }
+  #products = [];
+  constructor() {}
+
+  add(product) {
+    this.#products.push(product);
+  }
+
+  remove(product) {
+
+  }
+
+  getSize() {
+    return this.#products.length;
+  }
 };

@@ -44,6 +44,7 @@ header {
       height: 100%; }
       header nav ul li {
         display: flex;
+        position: relative;
         align-items: center;
         padding: .7em; }
         header nav ul li:last-child {
@@ -55,6 +56,19 @@ header {
             text-decoration: none;
             color: cornflowerblue;
             border-bottom-color: cornflowerblue; }
+        header nav ul li #cartSizeChip {
+          position: absolute;
+          top: 16px;
+          right: -7px;
+          width: 15px;
+          height: 15px;
+          border-radius: 7.5px;
+          background-color: #ff0000;
+          color: #ffffff;
+          font-size: 11px;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
 
 footer {
   padding: 6em .7em 3em;
