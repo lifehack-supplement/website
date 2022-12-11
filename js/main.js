@@ -7,6 +7,7 @@ let cart;
 function updateDOMCartSize() {
   const cartSizeChip = document.getElementById("cartSizeChip");
   cartSizeChip.textContent = cart.getSize();
+  cartSizeChip.style.display = "flex";
 }
 
 document.addEventListener("DOMContentLoaded", () => {

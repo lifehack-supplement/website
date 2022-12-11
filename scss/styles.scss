@@ -45,6 +45,12 @@ nav {
 header {
   padding: 1em .7em;
   display: flex;
+  & > a {
+    font-size: 1.7em;
+    &:hover {
+      text-decoration: none;
+    }
+  }
   nav {
     margin-left: 6em;
     ul {
@@ -69,6 +75,7 @@ header {
           }
         }
         #cartSizeChip {
+          display: none;
           position: absolute;
           top: 16px;
           right: -7px;
@@ -78,12 +85,26 @@ header {
           background-color: #ff0000;
           color: #ffffff;
           font-size: 11px;
-          display: flex;
           justify-content: center;
           align-items: center;
+          animation: .3s 1 normal chipBubbleUp;
         }
       }
     }
+  }
+}
+
+@keyframes chipBubbleUp {
+  0% {
+    scale: 0% 0%;
+  }
+
+  80% {
+    scale: 115% 115%;
+  }
+
+  100% {
+    scale: 100% 100%;
   }
 }
 
